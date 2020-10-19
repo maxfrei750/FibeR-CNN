@@ -1,0 +1,8 @@
+_BASE_: "fibercnn_keypoint_order_tblr.yaml"
+INPUT:
+  HFLIP: true
+  VFLIP: true
+  RANDOM_BRIGHTNESS:
+    ENABLED: true
+  RANDOM_CONTRAST:
+    ENABLED: true

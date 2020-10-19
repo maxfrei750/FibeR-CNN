@@ -1,0 +1,28 @@
+name: FibeR-CNN
+channels:
+- pytorch
+- defaults
+- conda-forge
+dependencies:
+- pytorch=1.4
+- cudatoolkit=10.1
+- torchvision
+- tensorboard
+- matplotlib
+- opencv
+- pandas
+- seaborn
+- tqdm
+- jupyter
+- graphviz
+- python-graphviz
+- cython
+- scikit-image
+- scipy
+- pip
+- pip:
+  - git+https://github.com/maxfrei750/hiddenlayer
+  - git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
+
+# Manual:
+# pip install detectron2==0.1 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html

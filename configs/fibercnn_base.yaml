@@ -1,0 +1,42 @@
+_BASE_: "/home/appuser/detectron2_repo/configs/COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml"
+VERSION: 2
+SEED: 3
+OUTPUT_DIR: "/code/output"
+DATASETS:
+  TRAIN: ("real_training",)
+  TEST: ("real_test",)
+MODEL:
+  META_ARCHITECTURE: FibeRCNN
+  FIBERLENGTH_ON: True
+  FIBERWIDTH_ON: True
+  ROI_HEADS:
+    NAME: "FiberROIHeads"
+    IN_FEATURES: ["p2", "p3", "p4", "p5"]
+    NUM_CLASSES: 1
+  WEIGHTS: "detectron2://COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x/137849621/model_final_a6e10b.pkl"
+  ROI_KEYPOINT_HEAD:
+    NUM_KEYPOINTS: 40
+    LOSS_TYPE: "DefaultKeypointLoss"
+  ROI_FIBERWIDTH_HEAD:
+    NAME: "FiberWidthHeadFC"
+    NUM_FC: 2
+    POOLER_RESOLUTION: 7
+    LOSS_WEIGHT: 1e-3
+  ROI_FIBERLENGTH_HEAD:
+    NAME: "FiberLengthHeadFC"
+    NUM_FC: 2
+    POOLER_RESOLUTION: 7
+    LOSS_WEIGHT: 1e-6
+  PIXEL_MEAN:
+  - 112.33
+  - 112.33
+  - 112.33
+SOLVER:
+  IMS_PER_BATCH: 16
+  MAX_ITER: 27000
+  CHECKPOINT_PERIOD: 1000
+  STEPS:
+  - 21000
+  - 25000
+TEST:
+  EVAL_PERIOD: 1000

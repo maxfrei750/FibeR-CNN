@@ -1,0 +1,5 @@
+_BASE_: "fibercnn_augmentation.yaml"
+MODEL:
+  POSTPROCESSING:
+    KEYPOINT_PRUNING:
+      ENABLED: True

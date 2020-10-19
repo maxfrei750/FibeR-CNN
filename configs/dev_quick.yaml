@@ -1,0 +1,8 @@
+_BASE_: "dev.yaml"
+VERSION: 2
+SOLVER:
+  MAX_ITER: 20
+DATASETS:
+  TEST: ("-loops_-clutter_-overlaps_test",)
+TEST:
+  EVAL_PERIOD: 10

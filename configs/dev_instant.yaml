@@ -1,0 +1,6 @@
+_BASE_: "dev.yaml"
+VERSION: 2
+SOLVER:
+  MAX_ITER: 1
+DATASETS:
+  TEST: ()

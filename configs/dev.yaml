@@ -1,0 +1,7 @@
+VERSION: 2
+OUTPUT_DIR: "/code/output/dev"
+MODEL:
+  ROI_HEADS:
+    SCORE_THRESH_TEST: 0.01
+SOLVER:
+  CHECKPOINT_PERIOD: 1000000000  # effectively disables checkpointing

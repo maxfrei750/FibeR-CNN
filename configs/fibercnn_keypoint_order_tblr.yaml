@@ -1,0 +1,3 @@
+_BASE_: "fibercnn_mask_loss.yaml"
+DATALOADER:
+  KEYPOINT_ORDER: "TopToBottomLeftToRight"

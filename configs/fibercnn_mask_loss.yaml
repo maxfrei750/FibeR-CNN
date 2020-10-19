@@ -1,0 +1,3 @@
+_BASE_: "fibercnn_base.yaml"
+MODEL:
+  MASK_ON: true
