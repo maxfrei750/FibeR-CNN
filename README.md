@@ -76,7 +76,7 @@ support Windows. However, there have been reports that it can be run on Windows 
 6. Activate the new conda environment:  
    `activate FibeR-CNN`
 7. Manually install detectron2:  
-   `pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/index.html`
+   `pip install detectron2==0.1 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.4/index.html`
 
 ## Getting started
 Depending on your use case, the following scripts are good starting points:  
