@@ -83,3 +83,6 @@ Depending on your use case, the following scripts are good starting points:
     `demo.py`  
     `train_model.py`  
     `evaluate_model.py`  
+    
+### Annotating your own data
+If applying the pretrained FibeR-CNN to your dataset does not achieve good enough results, it can be helpful to re-train it on your own data. To annotate your data, our [FiberAnnotator](https://github.com/maxfrei750/FiberAnnotator) application might be helpful.
